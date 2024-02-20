@@ -30,7 +30,7 @@ h2 {
 }
 
 section {
-    background-color: #fff;
+    background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -42,11 +42,6 @@ footer {
     padding: 20px;
     background-color: var(--main-color);
     color: #fff;
-}
-
-#idiomas {
-    background-color: #f4f4f4;
-    padding: 20px;
 }
 
 .languages-container {
@@ -73,12 +68,6 @@ footer {
     margin-bottom: 10px;
 }
 
-
-#informatica {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -101,18 +90,6 @@ footer {
 .skill span {
     font-size: 50px;
     margin-bottom: 10px;
-}
-
-#experiencia {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-
-
-#formacion {
-    background-color: #f4f4f4;
-    padding: 20px;
 }
 
 .contenedor {
@@ -139,37 +116,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.apartado div span img{
+div.contenedor div span img{
     margin: 0;
-    width: 30%;
-    height: 30%;
-}
-
-#formacion {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.apartado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px; /* Ajuste según necesidad */
-    text-align: center;
-}
-
-.apartado span {
-    font-size: 50px;
-    margin-bottom: 10px;
+    width: 35%;
 }
