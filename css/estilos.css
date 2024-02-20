@@ -115,7 +115,7 @@ footer {
     padding: 20px;
 }
 
-.contenido {
+.contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -134,12 +134,12 @@ footer {
     text-align: center;
 }
 
-.contenedor span {
+.apartado span {
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-.contenedor div span img{
+.apartado div span img{
     margin: 0;
     width: 30%;
     height: 30%;
@@ -157,7 +157,7 @@ footer {
     gap: 20px;
 }
 
-.course {
+.apartado {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,7 +169,7 @@ footer {
     text-align: center;
 }
 
-.course span {
+.apartado span {
     font-size: 50px;
     margin-bottom: 10px;
 }
