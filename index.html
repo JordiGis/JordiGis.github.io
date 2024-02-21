@@ -153,15 +153,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Obtener el alto del header
-            var headerHeight = document.querySelector('header').offsetHeight;
-
-            // Seleccionar todos los elementos con la clase 'separador'
+            var cabecera = document.querySelector('header');
+            var altoCabecera = cabecera.offsetHeight;
             var separadores = document.querySelectorAll('.separador');
 
-            // Iterar sobre la lista de separadores y aplicar el margen superior
             separadores.forEach(function(separador) {
-                separador.style.marginBottom = headerHeight + 'px';
+                separador.style.marginBottom = altoCabecera + 'px';
             });
         });
     </script>
