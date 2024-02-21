@@ -11,11 +11,26 @@
 <body>
     <header>
         <h1>Jordi Gisbert Ferriz</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#formacion">Formacion</a></li>
+                <li><a href="#idiomas">Idiomas</a></li>
+                <li><a href="#otros-conocimientos">Otros Conocimientos</a></li>
+                <li><a href="#carnets">Carnets</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="separador" id="inicio"></div>
+    <div>
         <p>Currículum Vitae</p>
         <cite>En igualdad de condiciones, la explicación más sencilla suele ser la correcta.<br>- La Navaja de Ockham</cite>
-    </header>
+    </div>
 
-    <section id="formacion">
+    <div class="separador" id="formacion"></div>
+    <section>
         <h2>Formación Reglada</h2>
         <div class="contenedor">
             <!--
@@ -53,7 +68,8 @@
         </div>
     </section>
 
-    <section id="idiomas">
+    <div class="separador" id="idiomas"></div>
+    <section>
         <h2>Idiomas</h2>
         <div class="contenedor">
             <div class="apartado">
@@ -62,7 +78,7 @@
                 <p>Nativo</p>
             </div>
             <div class="apartado">
-                <span>🇲🇩</span>
+                <span>🇦🇩</span>
                 <h3>Valenciano</h3>
                 <p>B1 - E.S.O</p>
             </div>
@@ -74,9 +90,9 @@
         </div>
     </section>
 
-
-    <section id="informatica">
-        <h2>Informática</h2>
+    <div class="separador" id="otros-conocimientos"></div>
+    <section>
+        <h2>Otros Conocimientos</h2>
 
         <div class="contenedor">
             <div class="apartado">
@@ -87,12 +103,12 @@
             <div class="apartado">
                 <span>💾</span>
                 <h3>Bases de Datos</h3>
-                <p>MongoDB, MySQL, PostgreSQL, SQLite</p>
+                <p>Prisma, MongoDB, MySQL, MadiaDB</p>
             </div>
             <div class="apartado">
                 <span>🔧</span>
                 <h3>Herramientas de Versionado</h3>
-                <p>Git, SVN</p>
+                <p>Git</p>
             </div>
             <div class="apartado">
                 <span>💻</span>
@@ -108,7 +124,8 @@
         </div>
     </section>
 
-    <section id="carnets">
+    <div class="separador" id="carnets"></div>
+    <section>
         <h2>Carnets</h2>
 
         <div class="contenedor">
@@ -125,10 +142,29 @@
         </div>
     </section>
 
-
-    <footer>
-        <p>Contacto: <a href="mailto:arturocandela@outlook.es">arturocandela@outlook.es</a> | LinkedIn: <a href="https://www.linkedin.com/in/arturocandela/">arturocandela</a> | GitHub: <a href="https://github.com/arturocandela/">arturocandela</a></p>
+    <footer id="contacto">
+        <div>
+            <img src="./img/correo.png" alt="Correo"><p>Contacto: <a href="mailto:jorgifer@alu.edu.gva.es">jorgifer@alu.edu.gva.es</a></p>
+        </div>
+        <div>
+            <img src="./img/linkedin.png" alt="LinkedIn"><p>LinkedIn: <a href="www.linkedin.com/in/jordigisberferriz">jordigisberferriz</a></p>
+        </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el alto del header
+            var headerHeight = document.querySelector('header').offsetHeight;
+
+            // Seleccionar todos los elementos con la clase 'separador'
+            var separadores = document.querySelectorAll('.separador');
+
+            // Iterar sobre la lista de separadores y aplicar el margen superior
+            separadores.forEach(function(separador) {
+                separador.style.marginBottom = headerHeight + 'px';
+            });
+        });
+    </script>
 </body>
 
 </html>
