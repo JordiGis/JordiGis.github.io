@@ -17,10 +17,10 @@ html {
     --color-principal1: rgb(238, 238, 179);
     --color-principal2: rgb(228, 228, 116);
     --color-gris1: rgb(77, 77, 77);
-    --color-hover-nav: #333;
+    --color-gris2: #333;
 }
 
-header, div#inicio, section, footer {
+header, div#inicio div, section, footer {
     margin: 20px auto;
     width: 80%;
     max-width: 960px;
@@ -79,7 +79,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover{
-    background-color: var(--color-hover-nav);
+    background-color: var(--color-gris2);
     color: var(--color-principal2);
 }
 
@@ -93,7 +93,7 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .contenedor {
@@ -120,11 +120,23 @@ section {
     margin-bottom: 10px;
 }
 
-div.contenedor div span img{
+div.contenedor div span img {
     margin: 0;
     width: 35%;
 }
 
+div.contenedor div p a {
+    color: var(--color-gris2);
+    transition: color 0.3s ease-in-out;
+}
+
+div.contenedor div p a:hover {
+    color: var(--color-principal2);
+}
+
+div.contenedor div p a::after {
+    content: ' 👆🏼';
+}
 
 footer {
     width: 100%;
