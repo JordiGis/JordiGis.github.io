@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyectos Python</title>
+        <link rel="stylesheet" href="../../css/estilos.css">
+    </head>
+    
+    <body>
+        <header>
+            <h1>Proyectos Python</h1>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html#lenguajes">Volver</a></li>
+                    <li><a href="#control-errores-vba">Control Errores VBA</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="separador" id="inicio"></div>
+    
+        <div class="separador" id="control-errores-vba"></div>
+        <section class="flex-column-center">
+            <h2>Control de Errores VBA mediante Python</h2>
+            <div class="contenedor proyectos">
+                <h3>Explicación:</h3>
+                <p>
+                    Modifica los ficheros con los formularios VBA, orientado a
+                    Access, implementado un control de errores, para cuando 
+                    hayan errores diga donde esta fallando, facilitando la 
+                    solución de fallos en las funcionalidades.
+                </p>
+                <div class="apartado">
+                    <h3>Archivos Sin Contorl de Errore, o anticuado.</h3>
+                    <p>
+                        <img src="./img/archivo.PNG" alt="">
+                    </p>
+                </div>
+
+                <div class="apartado">
+                    <h3>Disposición de los ficheros antes de Ejecución.</h3>
+                    <p>
+                        <img src="./img/ficheros-ant.PNG" alt="">
+                        No es necesario tener la carpeta "cap_salida", ya 
+                        que cuando se ejecute, se creara cuando al los fichero
+                        modificado.
+                    </p>
+                </div>
+
+                <div class="apartado">
+                    <h3>En Ejecucion.</h3>
+                    <p>
+                        <img src="./img/ejecucion.PNG" alt="">
+                    </p>
+                </div>
+
+                <div class="apartado">
+                    <h3>Disposición de los ficheros despues de Ejecución.</h3>
+                    <p>
+                        <img src="./img/ficheros-des.PNG" alt="">
+                        Se generan los nuevos archivos modificados, en la otra carpeta.
+                    </p>
+                </div>
+
+                <div class="apartado">
+                    <h3>Disposición de los ficheros despues de Ejecución.</h3>
+                    <p>
+                        <img src="./img/resultado.PNG" alt="">
+                        Se recicla el control de errores viejo, pero llamando al nuevo 
+                        metodo que se encargara, y en caso de no tenen ninguno, se aplicara 
+                        el nuevo.
+                    </p>
+                </div>
+            </div>
+        </section>
+    
+        <footer id="contacto">
+            <div>
+                <img src="../../img/correo.png" alt="Correo"><p>Contacto: <a href="mailto:jorgifer@alu.edu.gva.es">jorgifer@alu.edu.gva.es</a></p>
+            </div>
+            <div>
+                <img src="../../img/linkedin.png" alt="LinkedIn"><p>LinkedIn: <a href="https://www.linkedin.com/in/jordigisberferriz">jordigisberferriz</a></p>
+            </div>
+        </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var cabecera = document.querySelector('header');
+                var altoCabecera = cabecera.offsetHeight;
+                var separadores = document.querySelectorAll('.separador');
+    
+                separadores.forEach(function(separador) {
+                    separador.style.marginBottom = altoCabecera + 'px';
+                });
+            });
+        </script>
+    </body>
+    
+    </html>

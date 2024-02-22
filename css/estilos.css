@@ -96,11 +96,41 @@ section {
     /* margin-bottom: 20px; */
 }
 
+section h2 {
+    text-align: center;
+}
+
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+}
+
+section.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.flex-column-center h2 {
+    width: 100%;
+}
+
+.contenedor.proyectos,
+.contenedor.proyectos div {
+    width: 70%;
+}
+
+.contenedor h3, .contenedor p {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+div.contenedor.proyectos div p img {
+    margin: 0;
+    width: 100%;
 }
 
 .apartado {
@@ -123,6 +153,12 @@ section {
 div.contenedor div span img {
     margin: 0;
     width: 35%;
+}
+
+div.contenedor div span img.estrella {
+    margin: 0;
+    width: 15%;
+    margin-bottom: 15%;
 }
 
 div.contenedor div p a {
