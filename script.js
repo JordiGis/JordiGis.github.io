@@ -46,7 +46,7 @@
                 colorGris1 = computedStyles.getPropertyValue('--color-gris1-dark');
                 colorGris2 = computedStyles.getPropertyValue('--color-gris2-dark');
                 colorSeccion = computedStyles.getPropertyValue('--color-seccion-dark');
-                colorLetra = computedStyles.getPropertyValue('--color-principal1-dark');
+                colorLetra = computedStyles.getPropertyValue('--color-letra-dark');
             } else {
                 colorPrincipal1 = computedStyles.getPropertyValue('--color-principal1-light');
                 colorPrincipal2 = computedStyles.getPropertyValue('--color-principal2-light');

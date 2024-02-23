@@ -10,14 +10,15 @@
     --color-letra-light: #333;
 
     /* Colores por defecto (modo oscuro) */
-    --color-principal1-dark: rgb(0, 102, 204); /* Azul oscuro */
+    /* --color-principal1-dark: rgb(0, 102, 204); Azul oscuro */
+    --color-principal1-dark: rgb(62, 178, 255); /* Azul oscuro */
     --color-principal2-dark: rgb(0, 153, 255); /* Azul claro */
     --color-fondo-dark: rgb(166, 166, 166); /* Gris oscuro */
     --color-blando-dark: #222; /* Gris oscuro más oscuro */
     --color-gris1-dark: rgb(13, 40, 77); /* Gris claro */
     --color-gris2-dark: rgb(128, 128, 128); /* Gris medio */
     --color-seccion-dark: #666; /* Gris oscuro */
-    --color-letra-dark: rgb(249, 249, 249);
+    --color-letra-dark: rgb(157, 215, 250);
 
     /* Aplicar colores según el esquema de color preferido */
     --color-principal1: var(--color-principal1-light);
@@ -40,7 +41,7 @@
         --color-gris1: var(--color-gris1-dark);
         --color-gris2: var(--color-gris2-dark);
         --color-seccion: var(--color-seccion-dark);
-        --color-letra: var(--color-principal1-dark);
+        --color-letra: var(--color-letra-dark);
     }
 }
 * {
