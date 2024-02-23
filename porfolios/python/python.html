@@ -17,8 +17,6 @@
                 </ul>
             </nav>
         </header>
-        
-        <div class="separador" id="inicio"></div>
     
         <div class="separador" id="control-errores-vba"></div>
         <section class="flex-column-center">
@@ -34,14 +32,14 @@
                 <div class="apartado">
                     <h3>Archivos Sin Contorl de Errore, o anticuado.</h3>
                     <p>
-                        <img src="./img/archivo.PNG" alt="">
+                        <img src="./control-errores/img/archivo.PNG" alt="">
                     </p>
                 </div>
 
                 <div class="apartado">
                     <h3>Disposición de los ficheros antes de Ejecución.</h3>
                     <p>
-                        <img src="./img/ficheros-ant.PNG" alt="">
+                        <img src="./control-errores/img/ficheros-ant.PNG" alt="">
                         No es necesario tener la carpeta "cap_salida", ya 
                         que cuando se ejecute, se creara cuando al los fichero
                         modificado.
@@ -51,14 +49,14 @@
                 <div class="apartado">
                     <h3>En Ejecucion.</h3>
                     <p>
-                        <img src="./img/ejecucion.PNG" alt="">
+                        <img src="./control-errores/img/ejecucion.PNG" alt="">
                     </p>
                 </div>
 
                 <div class="apartado">
                     <h3>Disposición de los ficheros despues de Ejecución.</h3>
                     <p>
-                        <img src="./img/ficheros-des.PNG" alt="">
+                        <img src="./control-errores/img/ficheros-des.PNG" alt="">
                         Se generan los nuevos archivos modificados, en la otra carpeta.
                     </p>
                 </div>
@@ -66,7 +64,7 @@
                 <div class="apartado">
                     <h3>Disposición de los ficheros despues de Ejecución.</h3>
                     <p>
-                        <img src="./img/resultado.PNG" alt="">
+                        <img src="./control-errores/img/resultado.PNG" alt="">
                         Se recicla el control de errores viejo, pero llamando al nuevo 
                         metodo que se encargara, y en caso de no tenen ninguno, se aplicara 
                         el nuevo.
@@ -84,17 +82,7 @@
             </div>
         </footer>
     
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var cabecera = document.querySelector('header');
-                var altoCabecera = cabecera.offsetHeight;
-                var separadores = document.querySelectorAll('.separador');
-    
-                separadores.forEach(function(separador) {
-                    separador.style.marginBottom = altoCabecera + 'px';
-                });
-            });
-        </script>
+        <script src="../../script.js"></script>
     </body>
     
     </html>
