@@ -45,17 +45,17 @@
             });
         }
     }
-    
+
     function cambiarModo() {
         const computedStyles = getComputedStyle(document.documentElement);
         var modoOscuroCheckbox = document.getElementById('cambiarModo');
         modoOscuroCheckbox.addEventListener('change', function() {
-            let colorPrincipal1, colorPrincipal2, colorFondo, colorBlando, colorGris1, colorGris2, colorSeccion;
+            let colorPrincipal1, colorPrincipal2, colorFondo, colorblanco, colorGris1, colorGris2, colorSeccion;
             if (modoOscuroCheckbox.checked) {
                 colorPrincipal1 = computedStyles.getPropertyValue('--color-principal1-dark');
                 colorPrincipal2 = computedStyles.getPropertyValue('--color-principal2-dark');
                 colorFondo = computedStyles.getPropertyValue('--color-fondo-dark');
-                colorBlando = computedStyles.getPropertyValue('--color-blando-dark');
+                colorblanco = computedStyles.getPropertyValue('--color-blanco-dark');
                 colorGris1 = computedStyles.getPropertyValue('--color-gris1-dark');
                 colorGris2 = computedStyles.getPropertyValue('--color-gris2-dark');
                 colorSeccion = computedStyles.getPropertyValue('--color-seccion-dark');
@@ -64,7 +64,7 @@
                 colorPrincipal1 = computedStyles.getPropertyValue('--color-principal1-light');
                 colorPrincipal2 = computedStyles.getPropertyValue('--color-principal2-light');
                 colorFondo = computedStyles.getPropertyValue('--color-fondo-light');
-                colorBlando = computedStyles.getPropertyValue('--color-blando-light');
+                colorblanco = computedStyles.getPropertyValue('--color-blanco-light');
                 colorGris1 = computedStyles.getPropertyValue('--color-gris1-light');
                 colorGris2 = computedStyles.getPropertyValue('--color-gris2-light');
                 colorSeccion = computedStyles.getPropertyValue('--color-seccion-light');
@@ -75,7 +75,7 @@
             document.documentElement.style.setProperty('--color-principal1', colorPrincipal1);
             document.documentElement.style.setProperty('--color-principal2', colorPrincipal2);
             document.documentElement.style.setProperty('--color-fondo', colorFondo);
-            document.documentElement.style.setProperty('--color-blando', colorBlando);
+            document.documentElement.style.setProperty('--color-blanco', colorblanco);
             document.documentElement.style.setProperty('--color-gris1', colorGris1);
             document.documentElement.style.setProperty('--color-gris2', colorGris2);
             document.documentElement.style.setProperty('--color-seccion', colorSeccion);

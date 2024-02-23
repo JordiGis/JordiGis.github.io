@@ -1,9 +1,10 @@
 :root {
     /* Colores por defecto (modo claro) */
     --color-principal1-light: rgb(238, 238, 179);
-    --color-principal2-light: rgb(228, 228, 116);
+    /* --color-principal2-light: rgb(228, 228, 116); */
+    --color-principal2-light: rgb(240, 240, 57);
     --color-fondo-light: rgb(239, 239, 203);
-    --color-blando-light: #fff;
+    --color-blanco-light: #fff;
     --color-gris1-light: rgb(77, 77, 77);
     --color-gris2-light: #333;
     --color-seccion-light: #f4f4f4;
@@ -11,10 +12,10 @@
 
     /* Colores por defecto (modo oscuro) */
     /* --color-principal1-dark: rgb(0, 102, 204); Azul oscuro */
-    --color-principal1-dark: rgb(62, 178, 255); /* Azul oscuro */
-    --color-principal2-dark: rgb(0, 153, 255); /* Azul claro */
+    --color-principal1-dark: rgb(155, 215, 255); /* Azul oscuro */
+    --color-principal2-dark: rgb(4, 84, 244); /* Azul claro */
     --color-fondo-dark: rgb(166, 166, 166); /* Gris oscuro */
-    --color-blando-dark: #222; /* Gris oscuro más oscuro */
+    --color-blanco-dark: #222; /* Gris oscuro más oscuro */
     --color-gris1-dark: rgb(13, 40, 77); /* Gris claro */
     --color-gris2-dark: rgb(128, 128, 128); /* Gris medio */
     --color-seccion-dark: #666; /* Gris oscuro */
@@ -24,7 +25,7 @@
     --color-principal1: var(--color-principal1-light);
     --color-principal2: var(--color-principal2-light);
     --color-fondo: var(--color-fondo-light);
-    --color-blando: var(--color-blando-light);
+    --color-blanco: var(--color-blanco-light);
     --color-gris1: var(--color-gris1-light);
     --color-gris2: var(--color-gris2-light);
     --color-seccion: var(--color-seccion-light);
@@ -37,7 +38,7 @@
         --color-principal1: var(--color-principal1-dark);
         --color-principal2: var(--color-principal2-dark);
         --color-fondo: var(--color-fondo-dark);
-        --color-blando: var(--color-blando-dark);
+        --color-blanco: var(--color-blanco-dark);
         --color-gris1: var(--color-gris1-dark);
         --color-gris2: var(--color-gris2-dark);
         --color-seccion: var(--color-seccion-dark);
@@ -121,12 +122,14 @@ header nav ul li a {
     margin: 5px;
     padding: 5px;
     color: var(--color-principal1);
+    border-radius: 5px;
+    box-shadow: 3px 2px 5px var(--color-principal1);
     transition: all 0.5s ease-in-out;
 
 }
 
 header nav ul li a:hover{
-    background-color: var(--color-gris2);
+    box-shadow: 3px 2px 5px var(--color-principal2);
     color: var(--color-principal2);
 }
 
@@ -169,6 +172,11 @@ input[type="checkbox"]:checked#ampliar {
     background-image: url(../img/comprimir.png);
 }
 
+input[type="checkbox"]#cambiarModo:hover,
+input[type="checkbox"]#ampliar:hover {
+    background-color: var(--color-principal2);
+}
+
 div.separador {
     width: 100%;
     height: 5px;
@@ -179,7 +187,7 @@ div#cita {
     font-weight: bold;
 }
 
-div#cita p {
+div#cita h2 {
     border-bottom: 2px solid var(--color-principal1);
     padding-bottom: 10px;
 }
@@ -234,7 +242,7 @@ div.contenedor.proyectos div p img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-blando);
+    background-color: var(--color-blanco);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -301,6 +309,7 @@ footer div img {
 footer div p {
     display: inline-block;
     margin: 15px 0 15px 0;
+    color: var(--color-fondo);
 }
 
 footer div p a {

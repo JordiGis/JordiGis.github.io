@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordi Gisbert Ferriz - Currículum Vitae</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -29,7 +30,7 @@
     
     <div class="separador" id="inicio"></div>
     <div id="cita">
-        <p>Currículum Vitae</p>
+        <h2>Currículum Vitae</h2>
         <cite>En igualdad de condiciones, la explicación más sencilla suele ser la correcta.<br>- La Navaja de Ockham</cite>
     </div>
 
@@ -200,7 +201,23 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        var lastScrollTop = 0;
+
+        window.addEventListener("scroll", function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Descendiendo
+                console.log("Scroll hacia abajo");
+            } else {
+                // Ascendiendo
+                console.log("Scroll hacia arriba");
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+
+    </script>
 </body>
 
 </html>
