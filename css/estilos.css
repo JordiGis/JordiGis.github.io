@@ -113,9 +113,10 @@ header div#cabecera h1 {
 header nav ul {
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     text-decoration: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 header nav ul li {
@@ -326,3 +327,21 @@ footer div p a {
 footer div p a:hover {
     color: var(--color-principal2);
 }
+
+@media (max-width: 323px) {
+
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 230px) {
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
