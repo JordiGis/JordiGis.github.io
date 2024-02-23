@@ -17,7 +17,7 @@
     --color-gris1-dark: rgb(13, 40, 77); /* Gris claro */
     --color-gris2-dark: rgb(128, 128, 128); /* Gris medio */
     --color-seccion-dark: #666; /* Gris oscuro */
-    --color-letra-dark: #rgb(249, 249, 249)
+    --color-letra-dark: rgb(249, 249, 249);
 
     /* Aplicar colores según el esquema de color preferido */
     --color-principal1: var(--color-principal1-light);
@@ -40,7 +40,15 @@
         --color-gris1: var(--color-gris1-dark);
         --color-gris2: var(--color-gris2-dark);
         --color-seccion: var(--color-seccion-dark);
+        --color-letra: var(--color-principal1-dark);
     }
+}
+* {
+    transition: all 0.4s ease-in;
+}
+
+div * {
+    color: var(--color-letra);
 }
 
 body {
@@ -159,14 +167,22 @@ input[type="checkbox"]:checked#ampliar {
     background-image: url(../img/comprimir.png);
 }
 
-
-
 div.separador {
     width: 100%;
     height: 5px;
 }
 
-section {
+div#cita {
+    color: var(--color-principal1);
+    font-weight: bold;
+}
+
+div#cita p {
+    border-bottom: 2px solid var(--color-principal1);
+    padding-bottom: 10px;
+}
+
+div#cita, section {
     background-color: var(--color-seccion);
     padding: 20px;
     border-radius: 8px;
@@ -241,7 +257,8 @@ div.contenedor div span img.estrella {
 }
 
 div.contenedor div p a {
-    color: var(--color-gris2);
+    /* color: var(--color-gris2); */
+    /* color: var(); */
     transition: color 0.3s ease-in-out;
 }
 

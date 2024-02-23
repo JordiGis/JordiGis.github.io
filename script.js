@@ -46,6 +46,7 @@
                 colorGris1 = computedStyles.getPropertyValue('--color-gris1-dark');
                 colorGris2 = computedStyles.getPropertyValue('--color-gris2-dark');
                 colorSeccion = computedStyles.getPropertyValue('--color-seccion-dark');
+                colorLetra = computedStyles.getPropertyValue('--color-principal1-dark');
             } else {
                 colorPrincipal1 = computedStyles.getPropertyValue('--color-principal1-light');
                 colorPrincipal2 = computedStyles.getPropertyValue('--color-principal2-light');
@@ -54,7 +55,7 @@
                 colorGris1 = computedStyles.getPropertyValue('--color-gris1-light');
                 colorGris2 = computedStyles.getPropertyValue('--color-gris2-light');
                 colorSeccion = computedStyles.getPropertyValue('--color-seccion-light');
-                colorSeccion = computedStyles.getPropertyValue('--color-seccion-light');
+                colorLetra = computedStyles.getPropertyValue('--color-letra-light');
             }
             
             /* Asignacion a root */
@@ -65,5 +66,6 @@
             document.documentElement.style.setProperty('--color-gris1', colorGris1);
             document.documentElement.style.setProperty('--color-gris2', colorGris2);
             document.documentElement.style.setProperty('--color-seccion', colorSeccion);
+            document.documentElement.style.setProperty('--color-letra', colorLetra);
         });
     }
