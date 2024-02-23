@@ -132,21 +132,22 @@ header nav ul li a:hover{
 
 input[type="checkbox"]#cambiarModo {
     appearance: none;
-    width: 30px;
+    width: 50px;
     height: 30px;
     margin: 10px;
-    background-image: url(../img/luna.png);
-    background-size: 50%;
-    border-radius: 50%;
+    background-image: url(../img/btn-lingth.png);
+    background-color: var(--color-principal1);
+    /* background-size: 50%; */
+    border-radius: 50px;
     background-size: cover;
     background-position: center;
     position: relative;
-    top: -10px;
-    transition: all 0.4s ease-in-out;
+    top: -20px;
+    transition: all 0.6s ease-in-out;
 }
 
 input[type="checkbox"]:checked#cambiarModo {
-    background-image: url(../img/sol.png);
+    background-image: url(../img/btn-dark.png);
 }
 
 input[type="checkbox"]#ampliar {
@@ -160,7 +161,7 @@ input[type="checkbox"]#ampliar {
     background-size: cover;
     background-position: center;
     position: relative;
-    top: -10px;
+    top: -20px;
     transition: all 0.4s ease-in-out;
 }
 
