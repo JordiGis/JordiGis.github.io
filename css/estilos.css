@@ -132,7 +132,7 @@ header nav ul li a:hover{
 
 input[type="checkbox"]#cambiarModo {
     appearance: none;
-    width: 50px;
+    width: 55px;
     height: 30px;
     margin: 10px;
     background-image: url(../img/btn-lingth.png);

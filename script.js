@@ -46,7 +46,6 @@
         }
     }
     
-
     function cambiarModo() {
         const computedStyles = getComputedStyle(document.documentElement);
         var modoOscuroCheckbox = document.getElementById('cambiarModo');
