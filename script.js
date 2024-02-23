@@ -6,7 +6,21 @@
         separadores.forEach(function(separador) {
             separador.style.marginBottom = altoCabecera + 'px';
         });
+        // Verificar si está en modo oscuro
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const checkBox = document.getElementById('cambiarModo');
+        if (isDarkMode) {
+            checkBox.checked = true;
+        } else {
+            checkBox.checked = false;
+        }     
+        
     });
+
+
+
+
+
 
     /* Ampliar los contenidos de los Proyectos */
     function cambiarAncho() {
