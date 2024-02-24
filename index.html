@@ -12,11 +12,18 @@
 <body>
     <header>
         <div id="cabecera">
-            <h1>Jordi Gisbert Ferriz</h1>
+            <h1>
+                Jordi Gisbert Ferriz
+                <input type="checkbox" id="btn-barra" onclick="mostrarOcultarBarra()">
+                <label for="btn-barra">
+                    <i id="icono-flecha" class="fa-solid fa-caret-up"></i>
+                    <!-- <i class="fa-solid fa-caret-"></i> -->
+                </label>
+            </h1>
             <input type="checkbox" id="cambiarModo" onclick="cambiarModo()">
         </div>
-        <nav>
-            <ul>
+        <nav id="barra" class="redondear-bordes-abajo">
+            <ul id="lista-barra">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#formacion">Formacion</a></li>
                 <li><a href="#idiomas">Idiomas</a></li>
@@ -218,6 +225,7 @@
         }, false);
 
     </script>
+    <script src="https://kit.fontawesome.com/10fa419210.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -91,10 +91,8 @@ h2 {
 
 header {
     position: fixed;
-    background-color: var(--color-gris1);
     top: 0;
     margin: 0;
-    border-radius: 0 0 15px 15px;
 }
 
 header div#cabecera {
@@ -102,10 +100,26 @@ header div#cabecera {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-color: var(--color-gris1);
 }
 
 header div#cabecera h1 {
     margin: 5px;
+}
+
+#icono-flecha {
+    transform: rotateX(180deg);
+}
+
+.redondear-bordes-abajo {
+    border-radius: 0 0 15px 15px;
+}
+
+header nav {
+    background-color: var(--color-gris1);
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 header nav ul {
@@ -137,6 +151,22 @@ header nav ul li a {
 header nav ul li a:hover{
     box-shadow: 3px 2px 5px var(--color-principal2);
     color: var(--color-principal2);
+}
+
+input[type="checkbox"]#btn-barra {
+    appearance: none;
+}
+
+input[type="checkbox"]#btn-barra + label i{
+    color:var(--color-principal1);
+    position: relative;
+    top: 5px;
+    left: -10px;
+    width: 0;
+}
+
+input[type="checkbox"]#btn-barra + label i:hover {
+    color:var(--color-principal2);
 }
 
 input[type="checkbox"]#cambiarModo,
@@ -324,15 +354,6 @@ footer div p a {
 
 footer div p a:hover {
     color: var(--color-principal2);
-}
-
-@media (max-width: 323px) {
-
-    header nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
 }
 
 @media (max-width: 230px) {

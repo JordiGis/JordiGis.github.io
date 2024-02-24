@@ -11,14 +11,20 @@
     <body>
         <header>
             <div id="cabecera">
-                <h1>Proyectos Python</h1>
+                <h1>
+                    Proyectos Python
+                    <input type="checkbox" id="btn-barra" onclick="mostrarOcultarBarra()">
+                    <label for="btn-barra">
+                        <i id="icono-flecha" class="fa-solid fa-caret-up"></i>
+                    </label>
+                </h1>
                 <span>
                     <input type="checkbox" id="ampliar" value="" onclick="cambiarAncho()">
                     <input type="checkbox" id="cambiarModo" onclick="cambiarModo()">
                 </span>
             </div>
-            <nav>
-                <ul>
+            <nav id="barra" class="redondear-bordes-abajo">
+                <ul id="lista-barra">
                     <li><a href="../../index.html#lenguajes">Volver</a></li>
                     <li><a href="#control-errores-vba">Control Errores VBA</a></li>
                 </ul>
@@ -90,6 +96,8 @@
         </footer>
     
         <script src="../../script.js"></script>
+        <script src="https://kit.fontawesome.com/10fa419210.js" crossorigin="anonymous"></script>
+
     </body>
     
     </html>

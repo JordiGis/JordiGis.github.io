@@ -19,6 +19,35 @@
 
 
 
+    function mostrarOcultarBarra() {
+        var checkbox = document.getElementById('btn-barra');
+        var icono = document.getElementById('icono-flecha');
+        var cabecera = document.getElementById('cabecera')
+        var barra = document.getElementById('barra');
+        var listaBarra = document.getElementById('lista-barra');
+
+        var esconder = 'translateY(-200%)';
+        var mostrar = 'translateY(0%)';
+        var claseRedondearBordes = 'redondear-bordes-abajo'
+
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                cabecera.classList.add(claseRedondearBordes);
+                icono.style.transform = 'rotateX(360deg)';
+
+                barra.style.transform = esconder;
+                listaBarra.style.transform = esconder;
+                
+            } else {
+                icono.style.transform = 'rotateX(180deg)';
+                barra.style.transform = mostrar;
+                listaBarra.style.transform = mostrar;
+                cabecera.classList.remove(claseRedondearBordes);
+            }
+        });
+    }
+
+
 
 
 
