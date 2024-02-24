@@ -1,7 +1,6 @@
 :root {
     /* Colores por defecto (modo claro) */
     --color-principal1-light: rgb(238, 238, 179);
-    /* --color-principal2-light: rgb(228, 228, 116); */
     --color-principal2-light: rgb(240, 240, 57);
     --color-fondo-light: rgb(239, 239, 203);
     --color-blanco-light: #fff;
@@ -11,7 +10,6 @@
     --color-letra-light: #333;
 
     /* Colores por defecto (modo oscuro) */
-    /* --color-principal1-dark: rgb(0, 102, 204); Azul oscuro */
     --color-principal1-dark: rgb(155, 215, 255); /* Azul oscuro */
     --color-principal2-dark: rgb(4, 84, 244); /* Azul claro */
     --color-fondo-dark: rgb(166, 166, 166); /* Gris oscuro */
@@ -152,7 +150,7 @@ input[type="checkbox"]#cambiarModo {
     height: 30px;
     background-image: url(../img/btn-lingth.png);
     background-color: var(--color-principal1);
-    /* background-size: 50%; */
+    border: 1px solid black;
     border-radius: 50px;
     background-size: cover;
     background-position: center;
