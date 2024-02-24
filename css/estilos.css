@@ -82,6 +82,7 @@ header, footer {
 
 h1 {
     color: var(--color-principal1);
+    margin-right: 5px;
 }
 
 h2 {
@@ -161,7 +162,7 @@ input[type="checkbox"]#btn-barra + label i{
     color:var(--color-principal1);
     position: relative;
     top: 5px;
-    left: -10px;
+    left: -20px;
     width: 0;
 }
 
