@@ -1,6 +1,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         var cabecera = document.querySelector('header');
-        var altoCabecera = cabecera.offsetHeight;
+        var barra = document.getElementById('barra');
+        var altoCabecera = cabecera.offsetHeight+barra.offsetHeight;
         var separadores = document.querySelectorAll('.separador');
 
         separadores.forEach(function(separador) {
@@ -19,6 +20,34 @@
 
 
 
+    // function mostrarOcultarBarra() {
+    //     var checkbox = document.getElementById('btn-barra');
+    //     var icono = document.getElementById('icono-flecha');
+    //     var cabecera = document.getElementById('cabecera')
+    //     var barra = document.getElementById('barra');
+    //     var listaBarra = document.getElementById('lista-barra');
+
+    //     var esconder = 'translateY(-200%)';
+    //     var mostrar = 'translateY(0%)';
+    //     var claseRedondearBordes = 'redondear-bordes-abajo'
+
+    //     checkbox.addEventListener('change', function() {
+    //         if (checkbox.checked) {
+    //             cabecera.classList.add(claseRedondearBordes);
+    //             icono.style.transform = 'rotateX(360deg)';
+
+    //             barra.style.transform = esconder;
+    //             listaBarra.style.transform = esconder;
+                
+    //         } else {
+    //             icono.style.transform = 'rotateX(180deg)';
+    //             barra.style.transform = mostrar;
+    //             listaBarra.style.transform = mostrar;
+    //             cabecera.classList.remove(claseRedondearBordes);
+    //         }
+    //     });
+    // }
+
     function mostrarOcultarBarra() {
         var checkbox = document.getElementById('btn-barra');
         var icono = document.getElementById('icono-flecha');
@@ -30,6 +59,11 @@
         var mostrar = 'translateY(0%)';
         var claseRedondearBordes = 'redondear-bordes-abajo'
 
+
+        var header = document.querySelector('header');
+        var separadores = document.querySelectorAll('.separador');
+        var altura;
+
         checkbox.addEventListener('change', function() {
             if (checkbox.checked) {
                 cabecera.classList.add(claseRedondearBordes);
@@ -37,18 +71,70 @@
 
                 barra.style.transform = esconder;
                 listaBarra.style.transform = esconder;
+
+                altura = header.offsetHeight;
                 
             } else {
                 icono.style.transform = 'rotateX(180deg)';
                 barra.style.transform = mostrar;
                 listaBarra.style.transform = mostrar;
                 cabecera.classList.remove(claseRedondearBordes);
+
+                altura = header.offsetHeight+barra.offsetHeight;
             }
+
+            console.log(altura);
+            separadores.forEach(function(separador) {
+                separador.style.marginBottom = altura + 'px';
+            });
         });
     }
 
 
+/*
+    function mostrarOcultarBarra() {
+        var checkbox = document.getElementById('btn-barra');
+        var icono = document.getElementById('icono-flecha');
+        var cabecera = document.getElementById('cabecera')
+        var barra = document.getElementById('barra');
+        var listaBarra = document.getElementById('lista-barra');
 
+        var cabecera = document.querySelector('header');
+        var separadores = document.querySelectorAll('.separador');
+
+        var esconder = 'translateY(-200%)';
+        var mostrar = 'translateY(0%)';
+        var altura = '10';
+
+        checkbox.addEventListener('change', function() {
+            
+            if (checkbox.checked) {
+                cabecera.classList.add(claseRedondearBordes);
+                icono.style.transform = 'rotateX(360deg)';
+
+                barra.style.transform = esconder;
+                listaBarra.style.transform = esconder;
+
+                
+                // altura = '10';
+            } else {
+                icono.style.transform = 'rotateX(180deg)';
+                barra.style.transform = mostrar;
+                listaBarra.style.transform = mostrar;
+                cabecera.classList.remove(claseRedondearBordes);
+
+                // altura = cabecera.offsetHeight;
+            }
+            
+        });
+
+        // separadores.forEach(function(separador) {
+        //     separador.style.marginBottom = altura + 'px';
+        // });
+
+        
+    }
+    */
 
 
     /* Ampliar los contenidos de los Proyectos */
