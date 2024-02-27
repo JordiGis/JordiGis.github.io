@@ -94,6 +94,7 @@ header {
     position: fixed;
     top: 0;
     margin: 0;
+    z-index: 3;
 }
 
 header div#cabecera {
@@ -102,6 +103,7 @@ header div#cabecera {
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: var(--color-gris1);
+    z-index: 2;
 }
 
 header div#cabecera h1 {
@@ -284,6 +286,20 @@ div.contenedor.proyectos div p img {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 250px; /* Ajuste según necesidad */
     text-align: center;
+    box-shadow: 5px 5px 10px 5px var(--color-gris1);
+}
+
+.apartado:hover {
+    transform: scale(1.05);
+}
+
+.proyectos .apartado:hover {
+    transform: scale(1);
+}
+
+.apartado h3 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-principal1);
 }
 
 .apartado span {
