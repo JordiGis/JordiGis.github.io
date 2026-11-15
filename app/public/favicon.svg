@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="JordiGis">
+  <path d="M32 1 59 16v32L32 63 5 48V16Z" fill="#172126"/>
+  <g transform="translate(6 5) scale(.8)">
+    <path d="M18 17h9v24c0 9-5 14-14 14H8v-9h5c3 0 5-2 5-5V17Z" fill="#f4f3ee"/>
+    <path d="M56 25a12 12 0 1 0 0 16v-9H44v7h5v2a5 5 0 1 1 0-16Z" fill="#d55b3d"/>
+  </g>
+</svg>
