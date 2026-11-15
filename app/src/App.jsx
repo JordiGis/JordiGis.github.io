@@ -10,6 +10,16 @@ function Reveal({ children, className, delay = 0 }) {
   return <motion.div className={className} initial={reducedMotion ? false : { opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.16 }} transition={{ ...revealTransition, delay: reducedMotion ? 0 : delay }}>{children}</motion.div>
 }
 
+// Keep the scroll target still while its content enters and leaves reversibly.
+function ScrollReveal({ children, className }) {
+  const target = useRef(null)
+  const reducedMotion = useReducedMotion()
+  const { scrollYProgress } = useScroll({ target, offset: ['start 95%', 'end 5%'] })
+  const opacity = useTransform(scrollYProgress, [0, 0.28, 0.78, 1], [0, 1, 1, 0])
+  const y = useTransform(scrollYProgress, [0, 0.28, 0.78, 1], [44, 0, 0, -32])
+  return <div ref={target} className="scroll-reveal-slot"><motion.div className={className} style={reducedMotion ? undefined : { opacity, y }}>{children}</motion.div></div>
+}
+
 function ScrollProgress() {
   const reducedMotion = useReducedMotion()
   const { scrollYProgress } = useScroll()
@@ -106,7 +116,7 @@ export default function App() {
         <div className="project-list">{projects.map(p=><ProjectCard project={p} key={p.name}/>)}</div>
       </div></section>
 
-      <section id="perfil" className="profile-section wrap"><Reveal className="profile-intro"><p className="kicker">PERFIL PROFESIONAL</p><h2>Desarrollo de software<br/>para empresas y<br/><em>proyectos propios.</em></h2><p>Soy técnico informático y desarrollador de software. En ActivLink desarrollo funcionalidades para ERP y CRM, integro asistentes de IA y automatizo tareas internas. También participo en la evaluación de herramientas y en la formación de compañeros.</p><a className="text-link" href="https://www.linkedin.com/in/jordigis" target="_blank" rel="noreferrer">Ver trayectoria en LinkedIn <ArrowUpRight size={15}/></a></Reveal><div className="capability-list">{capabilities.map((c,i)=><Reveal className="capability" key={c.title} delay={i * 0.06}><span className="cap-index">0{i+1}</span><span className="cap-icon"><c.icon size={19}/></span><div><h3>{c.title}</h3><p>{c.text}</p></div><ArrowUpRight className="cap-arrow" size={17}/></Reveal>)}</div></section>
+      <section id="perfil" className="profile-section wrap"><ScrollReveal className="profile-intro"><p className="kicker">PERFIL PROFESIONAL</p><h2>Desarrollo de software<br/>para empresas y<br/><em>proyectos propios.</em></h2><p>Soy técnico informático y desarrollador de software. En ActivLink desarrollo funcionalidades para ERP y CRM, integro asistentes de IA y automatizo tareas internas. También participo en la evaluación de herramientas y en la formación de compañeros.</p><a className="text-link" href="https://www.linkedin.com/in/jordigis" target="_blank" rel="noreferrer">Ver trayectoria en LinkedIn <ArrowUpRight size={15}/></a></ScrollReveal><div className="capability-list">{capabilities.map((c,i)=><ScrollReveal className="capability" key={c.title}><span className="cap-index">0{i+1}</span><span className="cap-icon"><c.icon size={19}/></span><div><h3>{c.title}</h3><p>{c.text}</p></div><ArrowUpRight className="cap-arrow" size={17}/></ScrollReveal>)}</div></section>
 
       <section id="experiencia" className="experience-band"><Reveal className="wrap experience-inner"><div><p className="kicker">EXPERIENCIA · JUNIO DE 2025 — ACTUALIDAD</p><h2>Desarrollador full stack<br/><em>en ActivLink.</em></h2></div><div className="experience-copy"><p>Desarrollo funcionalidades para soluciones CRM y ERP, con atención a la modularidad y el mantenimiento. Integro asistentes de IA, agentes de voz y herramientas de consulta y análisis de datos para procesos internos y asesoramiento contable.</p><div className="stack-line">ODOO <i/> PYTHON <i/> PHP <i/> JAVASCRIPT / TYPESCRIPT <i/> REACT <i/> POSTGRESQL</div></div></Reveal></section>
       <section className="education-section wrap"><p className="kicker">FORMACIÓN</p><Reveal className="education-row"><span>2023 — 2025</span><h3>Técnico Superior en Desarrollo de Aplicaciones Web</h3><p>CIP FP Batoi</p></Reveal><Reveal className="education-row"><span>2021 — 2023</span><h3>Sistemas Microinformáticos y Redes</h3><p>IES Hermanos Amorós</p></Reveal></section>
